@@ -1,0 +1,46 @@
+{
+  "meta": {
+    "isPrivate": true,
+    "isLicensesEnabled": false,
+    "policy": "",
+    "ignoreSettings": null,
+    "projectId": "",
+    "org": "snyk-on-prem-tenp"
+  },
+  "filesystemPolicy": false,
+  "vulnerabilities": [],
+  "dependencyCount": 0,
+  "licensesPolicy": null,
+  "ignoreSettings": null,
+  "targetFile": "role.yaml",
+  "projectName": "manifest",
+  "org": "snyk-on-prem-tenp",
+  "policy": "",
+  "isPrivate": true,
+  "targetFilePath": "/Users/omerlh/dev/snyk-iac-poc/manifest/role.yaml",
+  "packageManager": "k8sconfig",
+  "path": "/Users/omerlh/dev/snyk-iac-poc",
+  "projectType": "k8sconfig",
+  "infrastructureAsCodeIssues": [
+    {
+      "id": "SNYK-CC-K8S-45",
+      "title": "RoleBinding to the default service account",
+      "type": "k8s",
+      "subType": "RoleBinding",
+      "severity": "high",
+      "isIgnored": false,
+      "iacDescription": {
+        "issue": "A binding was found between a role and the default service account",
+        "impact": "The use of default service account is discouraged",
+        "resolve": "Create specific service account instead of using the default one"
+      },
+      "lineNumber": 1,
+      "path": [
+        "[DocId: 0]",
+        "clusterrolebinding",
+        "subjects[0]",
+        "name"
+      ]
+    }
+  ]
+}
